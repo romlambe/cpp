@@ -6,13 +6,15 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:29:05 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/10 12:20:18 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:23:28 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "phonebook.hpp"
 #include <sstream>
+#include <iomanip>
+
 
 // Phonebook::Phonebook(){};
 Phonebook::~Phonebook(){};
@@ -54,11 +56,14 @@ void Phonebook::add(){
 void Phonebook::search(){
 	int nb = 0;
 	std::string input;
-	std::cout << "Index | First Name | Last Name | Nickname" << std::endl;
-	//ft pour trunc les données de + de 10 char
+	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" << std::setw(10) << "Last Name" << "|" << std::setw(10) << "Nickname" << std::endl;
 	for(int i = 0 ; i < 8 ; i++){
 		if (! tab[i].get_fname().empty())
-			std::cout << i + 1 << tab[i].get_fname() << tab[i].get_lname() << tab[i].get_nickname() << std::endl;
+			std::cout << std::setw(10) << i + 1 << "|"
+			<< std::setw(10) << (tab[i].get_fname().length() > 10 ? tab[i].get_fname().substr(0, 9) + "." : tab[i].get_fname()) << "|"
+			<< std::setw(10) << (tab[i].get_lname().length() > 10 ? tab[i].get_lname().substr(0, 9) + "." : tab[i].get_lname()) << "|"
+			<< std::setw(10) << (tab[i].get_nickname().length() > 10 ? tab[i].get_nickname().substr(0, 9) + "." : tab[i].get_nickname())
+			<< std::endl;
 	}
 	std::cout << "Search per index:" << std::endl;
 	std::getline(std::cin, input);
