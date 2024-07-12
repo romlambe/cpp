@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/11 15:42:28 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/12 12:14:11 by romlambe         ###   ########.fr       */
+/*   Created: 2024/07/12 11:57:56 by romlambe          #+#    #+#             */
+/*   Updated: 2024/07/12 12:12:44 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include "Zombie.hpp"
+#include <iostream>
 
-class Zombie{
+Zombie::Zombie(){
+	return ;
+}
 
-private:
-	std::string _name;
+Zombie::Zombie(std::string name){
+	this->_name = name;
+	return ;
+}
 
-public:
-	Zombie();
-	Zombie(std::string name);
-	~Zombie();
-	void	announce( void );
-	void	setName(std::string name);
-	Zombie *newZombie(std::string name);
-	void	randomChump(std::string name);
+Zombie::~Zombie(){
+	std::cout << this->_name << " is dead" << std::endl;
+	return ;
+}
 
-};
+void Zombie::announce(){
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(std::string name){
+	this->_name = name;
+}
