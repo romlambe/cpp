@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 12:01:13 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/17 14:08:18 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:26:00 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void Harl::complain(std::string level){
 		"DEBUG", "INFO", "WARNING", "ERROR"
 	};
 	int i = 0;
-	while (level != _level[i])
+	while (i < 4 && level != _level[i])
 		i++;
 	switch (i){
 	case 0:

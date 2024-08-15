@@ -6,11 +6,11 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/17 12:00:45 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:32:29 by romlambe         ###   ########.fr        #
+#    Updated: 2024/08/15 15:26:35 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = sed
+NAME = harlFilter
 AUTHOR = romlambe
 
 CC = c++

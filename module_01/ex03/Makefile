@@ -6,11 +6,11 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:24:17 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:32:45 by romlambe         ###   ########.fr        #
+#    Updated: 2024/08/15 15:17:34 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = string
+NAME = weapon
 AUTHOR = romlambe
 
 CC = c++

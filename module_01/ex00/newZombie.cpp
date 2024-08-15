@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 15:53:54 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/11 16:06:04 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:56:59 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 Zombie *Zombie::newZombie(std::string name){
 	Zombie *zombie = new Zombie();
 	zombie->setName(name);
-	// zombie->announce();
 	return (zombie);
 }
