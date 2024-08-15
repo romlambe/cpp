@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 23:26:09 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/28 23:27:45 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:52:51 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ public:
 	static Fixed & max(Fixed & a, Fixed & b);
 	static Fixed const & max(Fixed const & a, Fixed const & b);
 
-	friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif

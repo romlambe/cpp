@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 23:26:59 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/29 10:54:43 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:49:44 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ bool bsp(Point const a, Point const b, Point const c, Point const point){
 	float cross1 = crossProduct(ab, ap);
 	float cross2 = crossProduct(bc, bp);
 	float cross3 = crossProduct(ca, cp);
-	std::cout << cross1 << std::endl;
-	std::cout << cross2 << std::endl;
-	std::cout << cross3 << std::endl;
+	
+	// std::cout << cross1 << std::endl;
+	// std::cout << cross2 << std::endl;
+	// std::cout << cross3 << std::endl;
 	bool has_neg = (cross1 < 0) || (cross2 < 0) || (cross3 < 0);
 	bool has_pos = (cross1 > 0)  ||(cross2 > 0) || (cross3 > 0);
 

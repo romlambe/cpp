@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 15:17:13 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/28 12:28:12 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:30:57 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ public:
 	Fixed(const Fixed& fixed);
 	Fixed& operator=(const Fixed & other);
 	~Fixed(void);
+
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 	float toFloat(void)const;
 	int toInt(void)const;
-
-	friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+
 
 #endif

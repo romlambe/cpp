@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:03:20 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/25 14:52:30 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:28:47 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
 	Fixed(const Fixed& entier);
 	Fixed& operator=(const Fixed & other);
 	~Fixed(void);
+	
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 };

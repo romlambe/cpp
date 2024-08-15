@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 23:26:50 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/29 10:43:18 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:55:17 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,9 @@ Fixed Point::getX()const{
 
 Fixed Point::getY()const{
 	return this->y;
+}
+
+std::ostream& operator<<(std::ostream& os, const Point& point) {
+    os << "(" << point.getX() << ", " << point.getY() << ")";
+    return os;
 }
