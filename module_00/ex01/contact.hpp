@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:28:59 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/10 09:40:43 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:23:37 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 
 class Contact{
+private:
 	std::string fname;
 	std::string lname;
 	std::string nickname;

@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:29:05 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/10 15:23:28 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:24:55 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void Phonebook::search(){
 	std::stringstream ss(input);
 	ss >> nb;
 	if (nb > 0 && nb <= 8 && !tab[nb - 1].get_fname().empty()){
-		std::cout << "Index		: " << nb << std::endl;
+		std::cout << "Index	: " << nb << std::endl;
 		std::cout << "First Name	: " << tab[nb - 1].get_fname() << std:: endl;
 		std::cout << "Last Name	: " << tab[nb - 1].get_lname() << std::endl ;
 		std::cout << "Nickname	: " << tab[nb - 1].get_nickname() << std::endl;

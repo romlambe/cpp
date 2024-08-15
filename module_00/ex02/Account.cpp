@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 15:51:12 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/11 15:38:49 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/15 11:47:59 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ Account::Account(int initial_deposit)
 Account::~Account(){
 		_displayTimestamp();
 		std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
-		_nbAccounts--;
-		_totalAmount -= _amount;
+		// _nbAccounts--;
+		// _totalAmount -= _amount;
 }
 
 int Account::getNbAccounts(){
@@ -51,6 +51,7 @@ int Account::getNbWithdrawals(){
 }
 
 void Account::displayAccountsInfos(){
+	_displayTimestamp();
 	std::cout << "accounts:" << _nbAccounts <<";total:" << _totalAmount << ";deposits:"
 				<< _totalNbDeposits << ";withdrawals:" << _totalNbWithdrawals << std::endl;
 
@@ -58,16 +59,24 @@ void Account::displayAccountsInfos(){
 
 void Account::makeDeposit(int deposit){
 	_amount += deposit;
+	_nbDeposits++;
+	_totalNbDeposits++;
+	_totalAmount += deposit;
+	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";p_amount:" << (_amount - deposit)
 				<< ";deposit:" << deposit << ";amount:" << _amount
 				<< ";nb_deposit:" << _nbDeposits << std::endl;
 }
 
 bool Account::makeWithdrawal(int withdrawal){
-	_amount -= withdrawal;
+	_nbWithdrawals++;
+	_totalNbWithdrawals++;
+	_displayTimestamp();
 	if (_amount - withdrawal > 0){
+		_amount -= withdrawal;
+		_totalAmount -= withdrawal;
 		std::cout << "index" << _accountIndex << ";p_amount:" << (_amount + withdrawal)
-					<< ";withdrawals:" << withdrawal << ";amount:" << _amount << ";nb_withdrawals" << _nbWithdrawals << std::endl;
+					<< ";withdrawals:" << withdrawal << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
 		return (true);
 	}
 	else{
@@ -75,8 +84,6 @@ bool Account::makeWithdrawal(int withdrawal){
 					<< ";withdrawals:refused" << std::endl;
 		return (false);
 	}
-	//si amount - withdrawals > 0 == true -> amout -= withdrawals et nb_withdrawals++
-	//sinon refuser
 }
 
 int Account::checkAmount()const{
@@ -85,18 +92,18 @@ int Account::checkAmount()const{
 
 
 void Account::displayStatus()const{
+	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount
 				<< ";deposits:" << _nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
 }
 
-//oue je te l'ai volé JB (j'ai rien compris faut que je refasse la ft)
 void Account::_displayTimestamp(void) {
-    std::time_t t = std::time(NULL);
-    std::tm* now = std::localtime(&t);
-    std::cout << "[" << (now->tm_year + 1900)
-              << std::setw(2) << std::setfill('0') << (now->tm_mon + 1)
-              << std::setw(2) << std::setfill('0') << now->tm_mday << "_"
-              << std::setw(2) << std::setfill('0') << now->tm_hour
-              << std::setw(2) << std::setfill('0') << now->tm_min
-              << std::setw(2) << std::setfill('0') << now->tm_sec << "]";
+	std::time_t t = std::time(NULL);
+	std::tm* now = std::localtime(&t);
+	std::cout << "[" << (now->tm_year + 1900)
+			  << std::setw(2) << std::setfill('0') << (now->tm_mon + 1)
+			  << std::setw(2) << std::setfill('0') << now->tm_mday << "_"
+			  << std::setw(2) << std::setfill('0') << now->tm_hour
+			  << std::setw(2) << std::setfill('0') << now->tm_min
+			  << std::setw(2) << std::setfill('0') << now->tm_sec << "]";
 }

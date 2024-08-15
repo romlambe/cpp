@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/10 15:46:28 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/15 11:27:37 by romlambe         ###   ########.fr        #
+#    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
+#    Updated: 2024/08/08 17:00:00 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = account
+NAME = fixed
 AUTHOR = romlambe
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = Account.cpp tests.cpp
+SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
