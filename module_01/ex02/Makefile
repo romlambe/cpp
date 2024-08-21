@@ -6,11 +6,11 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:13:12 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:32:50 by romlambe         ###   ########.fr        #
+#    Updated: 2024/08/21 09:13:10 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = string
+NAME = adress
 AUTHOR = romlambe
 
 CC = c++

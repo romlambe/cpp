@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:57:42 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/12 12:16:39 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/08/21 09:06:18 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main(){
 		horde[i].announce();
 	}
 	delete [] horde;
-	std::cout << "horde is dead" << std::endl;
+	std::cout << "Horde is dead" << std::endl;
 	return 0;
 }
