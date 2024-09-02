@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:03:28 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/25 14:53:04 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/02 15:30:03 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Fixed::Fixed() : fixed(0){
 }
 
 Fixed::~Fixed(void){
-	std::cout << "Default destrucor called" << std::endl;
+	std::cout << "Default destructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed & other){

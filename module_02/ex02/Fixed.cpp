@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 12:46:40 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/28 13:09:06 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/02 15:50:34 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ Fixed::Fixed() : fixed(0){
 Fixed::~Fixed(void){
 }
 
-Fixed::Fixed(const Fixed & other){
-	*this = other;
+Fixed::Fixed(const Fixed & other) : fixed(other.fixed){
 }
 
 Fixed::Fixed(const float n){
@@ -30,7 +29,7 @@ Fixed::Fixed(const int n){
 	this->fixed = n << fractBitPart;
 }
 
-Fixed & Fixed::operator=(const Fixed & other){
+Fixed & Fixed::operator=(const Fixed& other){
 	if (this != &other)
 		this->fixed = other.getRawBits();
 	return *this;
@@ -73,7 +72,10 @@ Fixed Fixed::operator*(Fixed const & rhs)const{
 }
 
 Fixed Fixed::operator/(Fixed const & rhs)const{
-	return Fixed(this->toFloat() / rhs.toFloat());
+	if (rhs == 0)
+		return 0;
+	else
+		return Fixed(this->toFloat() / rhs.toFloat());
 }
 
 Fixed & Fixed::operator++(void){
