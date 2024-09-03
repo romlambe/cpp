@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:32:38 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:07:49 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 10:04:54 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 WrongCat::WrongCat(){
 	std::cout << "Constructor Wrong Cat called" << std::endl;
+}
+
+WrongCat::WrongCat(WrongCat const &src) : WrongAnimal(src) {
+	std::cout << "Copy of Cat created" << std::endl;
+}
+
+WrongCat & WrongCat::operator=(WrongCat const &rhs){
+	if (this != &rhs)
+		WrongAnimal::operator = (rhs);
+	return *this;
 }
 
 WrongCat::~WrongCat(){

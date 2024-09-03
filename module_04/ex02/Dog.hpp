@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:04:47 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:23:35 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:13:52 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ private:
 	Brain* brain;
 public:
 	Dog();
+	Dog(Dog const &src);
+	Dog & operator=(Dog const &rhs);
 	virtual ~Dog();
 	virtual void makeSound()const;
 };

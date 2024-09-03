@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:04:45 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:25:12 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:00:37 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 Dog::Dog() : Animal("Dog"){
 	this->brain = new Brain();
 	std::cout << "Constructor Dog called" << std::endl;
+}
+
+Dog::Dog(Dog const &src) : Animal(src){
+	this->brain = new Brain();
+	*this = src;
+	std::cout << "Copy of Cat created" << std::endl;
+}
+
+Dog & Dog::operator=(Dog const &rhs){
+	if (this != &rhs)
+		Animal::operator = (rhs);
+	return *this;
 }
 
 Dog::~Dog(){

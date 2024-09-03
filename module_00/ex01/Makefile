@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/09 14:17:34 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:33:08 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/03 15:30:56 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = phonebook.cpp contact.cpp main.cpp
+SRC = src/phonebook.cpp src/contact.cpp src/main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/10 15:46:28 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/15 11:27:37 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/03 15:33:09 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = Account.cpp tests.cpp
+SRC = src/Account.cpp src/tests.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

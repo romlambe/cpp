@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:04:10 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/07 15:58:18 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:19:32 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@ Animal::Animal(){
 
 Animal::Animal(std::string type) : type(type){
 	std::cout << "Type of animal: " << type << " create" << std::endl;
+}
+
+Animal::Animal(Animal const &src) : type(src.type){
+	std::cout << "Copy of " << type << " created" << std::endl;
+}
+
+Animal & Animal::operator=(Animal const &rhs){
+	if (this != &rhs){
+		type = rhs.type;
+	}
+	return *this;
 }
 
 Animal::~Animal(){

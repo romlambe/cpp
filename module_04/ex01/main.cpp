@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:03:34 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:27:08 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:09:37 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,19 @@ int main()
 
   for (int i = 0; i < size; i++)
   {
-    if (i % 2 == 0)
-      meta[i] = new Dog();
-    else
-      meta[i] = new Cat();
+	if (i % 2 == 0)
+	  meta[i] = new Dog();
+	else
+	  meta[i] = new Cat();
+	std::cout << std::endl;
   }
 
   for (int i = 0; i < size; i++)
   {
-    std::cout << meta[i]->getType() << " => ";
-    meta[i]->makeSound();
-    delete meta[i];
-    std::cout << std::endl;
+	std::cout << meta[i]->getType() << " => ";
+	meta[i]->makeSound();
+	delete meta[i];
+	std::cout << std::endl;
   }
   return 0;
 }

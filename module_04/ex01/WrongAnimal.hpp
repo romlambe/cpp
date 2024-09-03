@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:22:33 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:07:13 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:00:59 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ protected:
 public:
 	WrongAnimal();
 	WrongAnimal(std::string type);
+	WrongAnimal(WrongAnimal const &src);
+	WrongAnimal & operator=(WrongAnimal const &rhs);
 	virtual ~WrongAnimal();
 	void setType(std::string type);
 	std::string getType(void) const;

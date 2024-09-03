@@ -6,12 +6,12 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:29:03 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/10 09:17:00 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:31:16 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "contact.hpp"
+#include "../header/contact.hpp"
 
 Contact::Contact(){};
 Contact::~Contact(){};

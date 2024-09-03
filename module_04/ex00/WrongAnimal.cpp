@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 15:23:53 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 15:53:31 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 10:04:50 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@ WrongAnimal::WrongAnimal(){
 
 WrongAnimal::WrongAnimal(std::string type){
 	std::cout << "Type of Wrong Animal:" << type << "called" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(WrongAnimal const &src){
+	*this = src.type;
+	std::cout << "Copy of " << type << " created" << std::endl;
+}
+
+WrongAnimal & WrongAnimal::operator=(WrongAnimal const &rhs){
+	if (this != &rhs)
+		type = rhs.type;
+	return *this;
 }
 
 WrongAnimal::~WrongAnimal(){

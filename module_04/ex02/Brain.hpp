@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 16:20:26 by romlambe          #+#    #+#             */
-/*   Updated: 2024/08/06 16:23:18 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:13:35 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ protected:
 	std::string ideas[100];
 public:
 	Brain();
+	Brain(Brain const &src);
+	Brain & operator=(Brain const &rhs);
 	~Brain();
 };
 

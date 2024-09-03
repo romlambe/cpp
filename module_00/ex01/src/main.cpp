@@ -6,12 +6,12 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 09:30:13 by romlambe          #+#    #+#             */
-/*   Updated: 2024/07/10 10:07:07 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:31:23 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
-#include "contact.hpp"
+#include "../header/phonebook.hpp"
+#include "../header/contact.hpp"
 #include <iostream>
 
 int main(){

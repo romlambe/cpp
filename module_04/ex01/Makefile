@@ -6,11 +6,11 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:30:33 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/02 16:15:57 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = animal
 AUTHOR = romlambe
 
 CC = c++

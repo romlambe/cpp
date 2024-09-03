@@ -6,11 +6,11 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/08 17:00:00 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/03 15:28:57 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = material
 AUTHOR = romlambe
 
 CC = c++
