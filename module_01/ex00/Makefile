@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/11 16:03:57 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:32:58 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/03 15:35:35 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRC = src/Zombie.cpp src/main.cpp src/newZombie.cpp src/randomChump.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

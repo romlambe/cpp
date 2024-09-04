@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/17 12:00:45 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/15 15:26:35 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/04 14:18:51 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp Harl.cpp
+SRC = src/main.cpp src/Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

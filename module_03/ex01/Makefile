@@ -6,17 +6,17 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 12:36:27 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/06 16:31:17 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/04 14:25:32 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = scarvtrap
 AUTHOR = romlambe
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = src/main.cpp src/ClapTrap.cpp src/ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

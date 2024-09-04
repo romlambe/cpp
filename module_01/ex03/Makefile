@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 16:24:17 by romlambe          #+#    #+#              #
-#    Updated: 2024/08/15 15:17:34 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/04 14:17:23 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = src/main.cpp src/HumanA.cpp src/HumanB.cpp src/Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
