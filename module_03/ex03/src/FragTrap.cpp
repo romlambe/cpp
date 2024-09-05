@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 16:42:45 by romlambe          #+#    #+#             */
-/*   Updated: 2024/09/04 14:31:44 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/05 12:27:17 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
 	std::cout << "FragTrap constructor called" << std::endl;
-	_hitPoint = 100;
-	_energyPoint = 100;
-	_attackPoint = 30;
+	this->_hitPoint = 100;
+	this->_energyPoint = 100;
+	this->_attackPoint = 30;
 }
 
-FragTrap::FragTrap(FragTrap const & src): ClapTrap(src){
+FragTrap::FragTrap(FragTrap const & src): ClapTrap(src) {
 	std::cout << "FragTrap copy constructor called" << std::endl;
-	*this = src;
 }
 
 FragTrap & FragTrap::operator=(FragTrap const & rhs){
@@ -36,6 +35,10 @@ FragTrap & FragTrap::operator=(FragTrap const & rhs){
 
 FragTrap::~FragTrap(){
 	std::cout << "FragTrap destructor called" << std::endl;
+}
+
+void FragTrap::attack(const std::string &target){
+	std::cout << "FragTrap " << target << " causing " << this->_attackPoint << " damage points !" << std::endl;
 }
 
 void FragTrap::highFivesGuys(){

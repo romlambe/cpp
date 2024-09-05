@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/29 16:42:50 by romlambe          #+#    #+#             */
-/*   Updated: 2024/09/05 12:27:07 by romlambe         ###   ########.fr       */
+/*   Created: 2024/08/06 16:20:21 by romlambe          #+#    #+#             */
+/*   Updated: 2024/09/05 16:28:42 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#include "../header/Brain.hpp"
 
-#include "ClapTrap.hpp"
+Brain::Brain(){
+	std::cout << "Brain constructed" << std::endl;
+}
 
-class FragTrap : virtual public ClapTrap {
+Brain::Brain(Brain const &src){
+	*this = src;
+	std::cout << "Brain copy constructed" << std::endl;
+}
 
-public:
-	FragTrap(std::string name);
-	FragTrap(FragTrap const & src);
-	FragTrap & operator=(FragTrap const & rhs);
-	~FragTrap();
+Brain & Brain::operator=(Brain const &rhs){
+	for (int i = 0; i < 100; i++)
+		ideas[i] = rhs.ideas[i];
+	return *this;
+}
 
-	void attack(const std::string &target);
-	void highFivesGuys(void);
-};
-
-#endif
+Brain::~Brain(){
+	std::cout << "Brain destructed" << std::endl;
+}

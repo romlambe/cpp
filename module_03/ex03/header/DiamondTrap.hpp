@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:38:46 by romlambe          #+#    #+#             */
-/*   Updated: 2024/09/04 15:12:33 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/09/04 16:01:01 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap{
+class DiamondTrap : public FragTrap, public ScavTrap{
 
 private:
 	std::string _name;

@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/09/03 15:28:57 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/05 16:33:04 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
+SRC = src/main.cpp src/AMateria.cpp src/Character.cpp src/Cure.cpp src/Ice.cpp src/MateriaSource.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)

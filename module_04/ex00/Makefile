@@ -6,7 +6,7 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/09/02 16:10:30 by romlambe         ###   ########.fr        #
+#    Updated: 2024/09/05 15:25:34 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ AUTHOR = romlambe
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
