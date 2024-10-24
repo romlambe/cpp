@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/06 15:05:16 by romlambe          #+#    #+#             */
-/*   Updated: 2024/09/05 16:39:59 by romlambe         ###   ########.fr       */
+/*   Created: 2024/10/24 15:22:38 by romlambe          #+#    #+#             */
+/*   Updated: 2024/10/24 15:50:27 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef ROBOTOMY_HPP
+#define ROBOTOMY_HPP
 
 #include <iostream>
+#include <fstream>
+#include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
-class Animal{
 
-protected:
-	std::string type;
-
+class RobotomyRequestForm: public AForm{
+private:
+	std::string _target;
 public:
-	Animal();
-	Animal(std::string type);
-	Animal(Animal const &src);
-	Animal & operator=(Animal const &rhs);
-	virtual ~Animal();
-	void setType(std::string type);
-	std::string getType(void) const;
-	virtual void makeSound()const = 0;
+	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm(RobotomyRequestForm const &src);
+	~RobotomyRequestForm();
+	RobotomyRequestForm & operator=(RobotomyRequestForm  const &other);
+
+	void execute(Bureaucrat const &bureaucrat) const;
 };
 
 #endif

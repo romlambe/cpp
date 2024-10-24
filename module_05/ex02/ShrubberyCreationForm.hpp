@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/06 15:05:16 by romlambe          #+#    #+#             */
-/*   Updated: 2024/09/05 16:39:59 by romlambe         ###   ########.fr       */
+/*   Created: 2024/10/24 14:41:11 by romlambe          #+#    #+#             */
+/*   Updated: 2024/10/24 15:50:16 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef SHRUBERRY_HPP
+#define SHRUBERRY_HPP
 
 #include <iostream>
+#include <fstream>
+#include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
-class Animal{
 
-protected:
-	std::string type;
-
+class ShrubberyCreationForm: public AForm{
+private:
+	std::string _target;
 public:
-	Animal();
-	Animal(std::string type);
-	Animal(Animal const &src);
-	Animal & operator=(Animal const &rhs);
-	virtual ~Animal();
-	void setType(std::string type);
-	std::string getType(void) const;
-	virtual void makeSound()const = 0;
+	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm(ShrubberyCreationForm const &src);
+	~ShrubberyCreationForm();
+	ShrubberyCreationForm & operator=(ShrubberyCreationForm  const &other);
+
+	void execute(Bureaucrat const &bureaucrat) const;
+
 };
 
 #endif
