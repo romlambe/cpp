@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:36:00 by romlambe          #+#    #+#             */
-/*   Updated: 2024/10/24 15:50:56 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:28:48 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,20 @@ int main() {
         } catch (std::exception &e) {
             std::cerr << "Exception caught: " << e.what() << std::endl;
         }
+
+		std::cout << "Trying to execute with Bureaucrat function: " << std::endl;
+		try{
+			JohnSmith.executeForm(shrubberyForm);
+		}catch(std::exception &e){
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+
+		std::cout << "Retrying to execute with Low rank= " << std::endl;
+		try {
+			LowRank.executeForm(shrubberyForm);
+		} catch(std::exception &e){
+			std::cerr << "exception caught: " << e.what() << std::endl;
+		}
 
     } catch (std::exception &e) {
             std::cerr << "Exception caught: " << e.what() << std::endl;
