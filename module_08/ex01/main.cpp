@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:57:31 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/07 15:06:06 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:08:10 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(){
 	try {
 		Span t(1);
 		t.addNumber(3);
-		// t.addNumber(2);
+		t.addNumber(2);
 		try{
 			std::cout << "Longest distance between 2 numbers: " << t.longestSpan() << std::endl;
 			std::cout << "Shortest distance between 2 numbers: " << t.shortestSpan() << std::endl;
