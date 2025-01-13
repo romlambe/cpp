@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:00:11 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/15 16:10:12 by romlambe         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:32:30 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <vector>
 #include <list>
 #include <algorithm>
+#include <cstdlib>
+#include <cctype>
+#include <ctime>
 
 class PmergeMe{
 private:

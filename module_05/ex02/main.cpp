@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:36:00 by romlambe          #+#    #+#             */
-/*   Updated: 2024/10/26 14:28:48 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/13 09:46:21 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,65 +17,71 @@
 #include "PresidentialPardonForm.hpp"
 
 int main() {
-    try {
-        // Création des bureaucrates
-        Bureaucrat JohnSmith("John Smith", 42);
-        Bureaucrat HighRank("High Rank", 1);
-        Bureaucrat LowRank("Low Rank", 150);
+	try {
+		// Création des bureaucrates
+		Bureaucrat JohnSmith("John Smith", 42);
+		Bureaucrat HighRank("High Rank", 1);
+		Bureaucrat LowRank("Low Rank", 150);
 
-        // Création des formulaires
-        ShrubberyCreationForm shrubberyForm("Form_24601");
-        RobotomyRequestForm robotomyForm("Captain Picard");
-        PresidentialPardonForm pardonForm("Richard Nixon");
+		// Création des formulaires
+		ShrubberyCreationForm shrubberyForm("Form_24601");
+		RobotomyRequestForm robotomyForm("Captain Picard");
+		PresidentialPardonForm pardonForm("Richard Nixon");
 
-        // Test de la signature et de l'exécution des formulaires
-        std::cout << "Trying to execute ShrubberyCreationForm with LowRank:" << std::endl;
-        try {
-            shrubberyForm.beSigned(LowRank);
-            shrubberyForm.execute(LowRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		// Test de la signature et de l'exécution des formulaires
+		std::cout << "Trying to execute ShrubberyCreationForm with LowRank:" << std::endl;
+		try {
+			shrubberyForm.beSigned(LowRank);
+			shrubberyForm.execute(LowRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
-        std::cout << "Trying to execute ShrubberyCreationForm with HighRank:" << std::endl;
-        try {
-            shrubberyForm.beSigned(HighRank);
-            shrubberyForm.execute(HighRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		std::cout << "Trying to execute ShrubberyCreationForm with HighRank:" << std::endl;
+		try {
+			shrubberyForm.beSigned(HighRank);
+			shrubberyForm.execute(HighRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
-        std::cout << "Trying to execute RobotomyRequestForm with LowRank:" << std::endl;
-        try {
-            robotomyForm.beSigned(LowRank);
-            robotomyForm.execute(LowRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		std::cout << "Trying to execute RobotomyRequestForm with LowRank:" << std::endl;
+		try {
+			robotomyForm.beSigned(LowRank);
+			robotomyForm.execute(LowRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
-        std::cout << "Trying to execute RobotomyRequestForm with HighRank:" << std::endl;
-        try {
-            robotomyForm.beSigned(HighRank);
-            robotomyForm.execute(HighRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		std::cout << "Trying to execute RobotomyRequestForm with HighRank:" << std::endl;
+		try {
+			robotomyForm.beSigned(HighRank);
+			robotomyForm.execute(HighRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
-        std::cout << "Trying to execute PresidentialPardonForm with LowRank:" << std::endl;
-        try {
-            pardonForm.beSigned(LowRank);
-            pardonForm.execute(LowRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		std::cout << "Trying to execute PresidentialPardonForm with LowRank:" << std::endl;
+		try {
+			pardonForm.beSigned(LowRank);
+			pardonForm.execute(LowRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
-        std::cout << "Trying to execute PresidentialPardonForm with HighRank:" << std::endl;
-        try {
-            pardonForm.beSigned(HighRank);
-            pardonForm.execute(HighRank);
-        } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-        }
+		std::cout << "Trying to execute PresidentialPardonForm with HighRank:" << std::endl;
+		try {
+			pardonForm.beSigned(HighRank);
+			pardonForm.execute(HighRank);
+		} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+		}
+		std::cout << std::endl;
 
 		std::cout << "Trying to execute with Bureaucrat function: " << std::endl;
 		try{
@@ -83,6 +89,7 @@ int main() {
 		}catch(std::exception &e){
 			std::cerr << "Exception caught: " << e.what() << std::endl;
 		}
+		std::cout << std::endl;
 
 		std::cout << "Retrying to execute with Low rank= " << std::endl;
 		try {
@@ -90,9 +97,10 @@ int main() {
 		} catch(std::exception &e){
 			std::cerr << "exception caught: " << e.what() << std::endl;
 		}
+		std::cout << std::endl;
 
-    } catch (std::exception &e) {
-            std::cerr << "Exception caught: " << e.what() << std::endl;
-    }
-    return 0;
+	} catch (std::exception &e) {
+			std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
+	return 0;
 }

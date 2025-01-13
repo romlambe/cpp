@@ -6,17 +6,17 @@
 #    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/04 15:53:27 by romlambe          #+#    #+#              #
-#    Updated: 2024/11/15 15:02:28 by romlambe         ###   ########.fr        #
+#    Updated: 2024/11/18 15:08:36 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RPN
+NAME = PmergeMe
 AUTHOR = romlambe
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp RPN.cpp
+SRC = main.cpp PmergeMe.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
