@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: romlambe <romlambe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:35:40 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/04 14:12:39 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:21:27 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,21 @@ void identify(Base & p){
 		(void) a;
 		std::cout << "A" << std::endl;
 		return;
-	}catch(const std::bad_cast &){};
+	}catch(...){};
 
 	try {
 		B& b = dynamic_cast<B&>(p);
 		(void) b;
 		std::cout << "B" << std::endl;
 		return;
-	}catch(const std::bad_cast &){};
+	}catch(...){};
 
 	try {
 		C& c = dynamic_cast<C&>(p);
 		(void) c;
 		std::cout << "C" << std::endl;
 		return;
-	}catch(const std::bad_cast &){};
+	}catch(...){};
 
 	std::cout << "Unknow type" << std::endl;
 }

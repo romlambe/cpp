@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: romlambe <romlambe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:21:47 by romlambe          #+#    #+#             */
-/*   Updated: 2024/10/29 15:43:20 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:15:04 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERIALIZER_HPP
 #define SERIALIZER_HPP
 
-#include <cstdint>
 #include <iostream>
+#include <stdint.h>
+
 
 typedef struct Data{
 	std::string name;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: romlambe <romlambe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:27:07 by romlambe          #+#    #+#             */
-/*   Updated: 2024/10/28 16:38:22 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/13 10:23:55 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define SCALAR_HPP
 
 #include <iostream>
+#include <cstdlib>
+#include <cmath>
 
 class ScalarConverter{
 public:
