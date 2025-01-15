@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: romlambe <romlambe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/11/04 14:10:29 by romlambe         ###   ########.fr        #
+#    Updated: 2025/01/15 15:03:59 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = converter
+NAME = base
 AUTHOR = romlambe
 
 CC = c++

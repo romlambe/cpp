@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romlambe <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: romlambe <romlambe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 15:03:15 by romlambe          #+#    #+#              #
-#    Updated: 2024/10/28 17:43:57 by romlambe         ###   ########.fr        #
+#    Updated: 2025/01/15 15:03:48 by romlambe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = converter
+NAME = scalarConverter
 AUTHOR = romlambe
 
 CC = c++
