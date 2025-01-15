@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 16:27:07 by romlambe          #+#    #+#             */
-/*   Updated: 2025/01/15 15:10:26 by romlambe         ###   ########.fr       */
+/*   Created: 2025/01/15 15:14:44 by romlambe          #+#    #+#             */
+/*   Updated: 2025/01/15 15:15:23 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-#define SCALAR_HPP
+#include "Base.hpp"
 
-#include <iostream>
-#include <string>
-#include <cmath>
-#include <climits>
-
-class ScalarConverter{
-private:
-	ScalarConverter();
-	ScalarConverter(ScalarConverter const &src);
-	~ScalarConverter();
-
-	ScalarConverter &operator=(ScalarConverter const &other);
-
-	std::string _str;
-
-public:
-	static void converter(std::string const &str);
+class B: public Base{
 };
-
-#endif

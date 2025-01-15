@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:48:16 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/04 13:54:46 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/15 15:15:40 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,6 @@
 class Base{
 public:
 	virtual ~Base();
-};
-
-class A: public Base{
-};
-
-class B: public Base{
-};
-
-class C: public Base{
 };
 
 Base * generate(void);
