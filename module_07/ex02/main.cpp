@@ -6,6 +6,10 @@ int main(void)
 	Array<int> a(5);
 	Array<int> b(5);
 	Array<int> c(5);
+	Array<std::string> strArray(3);
+	strArray[0] = "Hello";
+	strArray[1] = "World";
+	strArray[2] = "!";
 
 	for (unsigned int i = 0; i < a.size(); i++)
 	{
@@ -43,6 +47,13 @@ int main(void)
 		std::cout << e[i] << " ";
 	std::cout << std::endl;
 
+	std::cout << "Complex type: ";
+	for (unsigned int i = 0; i < strArray.size(); i++){
+		std::cout << strArray[i] << " ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "Trying to search in an index out of range" << std::endl;
 	try
 	{
 		std::cout << "a[5]: " << a[5] << std::endl;

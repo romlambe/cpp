@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:21:50 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/05 17:13:29 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/17 14:31:11 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ template <typename T>
 void addString(T &str){
 	str += " day";
 }
-
 
 
 int main() {
