@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:00:13 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/19 16:40:15 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/22 16:16:35 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int digital_string(const char *str){
 
 int PmergeMe::parse_args(char **av){
 	int i = 0;
-
 	while (av[i]){
 		if (!digital_string(av[i])){
 			std::cout << "Error: " << av[i] << "isn't a number" << std::endl;
@@ -65,7 +64,7 @@ int PmergeMe::parse_args(char **av){
 			std::cout << "Error: " << av[i] << "must be smaller than INT MAX " << std::endl;
 			return 1;
 		}
-		args.push_back(static_cast<int>(num));
+		this->args.push_back(static_cast<int>(num));
 		i++;
 	}
 	return 0;
@@ -73,7 +72,6 @@ int PmergeMe::parse_args(char **av){
 
 int PmergeMe::merge_vector(){
 	std::clock_t start_timer = std::clock();
-	double duration;
 
 	if (is_sorted(this->args)){
 		std::cout << "Already sorted" << std::endl;
@@ -88,84 +86,64 @@ int PmergeMe::merge_vector(){
 
 	std::vector<std::pair<int,int> > pairs;
 	for (size_t i = 0; i < this->args.size(); i += 2){
-		if (i + 1 < args.size())
-			if (this->args[i] > this->args[i + 1])
-				pairs.push_back(std::make_pair(this->args[i + 1], this->args[i]));
-			else
-				pairs.push_back(std::make_pair(this->args[i], this->args[i + 1]));
-		else{
-			pairs.push_back(std::make_pair(-1, this->args[i]));
-		}
+		int first = this->args[i];
+		int second = (i + 1 < this->args.size() ? this->args[i + 1] : -1);
+		if (second != -1 && first > second)
+			std::swap(first, second);
+		pairs.push_back(std::make_pair(first, second));
 	}
 	std::vector<int> mins;
-	for (std::vector<std::pair<int,int> >::const_iterator it = pairs.begin(); it != pairs.end() ; ++it){
-		if (it->first != -1){
-			mins.push_back(it->first);
-		}
-	}
-
+	for (size_t i = 0; i < pairs.size(); ++i)
+		mins.push_back(pairs[i].first);
 	std::sort(mins.begin(), mins.end());
 
-	for (std::vector<std::pair<int, int> >::const_iterator it = pairs.begin(); it != pairs.end(); ++it){
-			std::vector<int>::iterator pos = std::lower_bound(mins.begin(), mins.end(), it->second);
-			mins.insert(pos, it->second);
+
+	std::vector<int> sorted = mins;
+	for (size_t i = 0; i < pairs.size(); ++i){
+		if (pairs[i].second != -1){
+			std::vector<int>::iterator pos = std::lower_bound(sorted.begin(), sorted.end(), pairs[i].second);
+			sorted.insert(pos, pairs[i].second);
+		}
 	}
-	this->vector_sorted = mins;
-
-	duration = static_cast<double>(std::clock() - start_timer) / CLOCKS_PER_SEC * 1000;
-
-	this->vector_duration = duration;
+	this->vector_sorted = sorted;
+	this->vector_duration = static_cast<double>(std::clock() - start_timer) / CLOCKS_PER_SEC * 1000;
 	return 0;
 }
 
 int PmergeMe::merge_list(){
 	std::clock_t start_time = std::clock();
-	double duration;
 
 	if (is_sorted(this->args)){
 		std::cout << "Already is sorted" << std::endl;
-		this->list_sorted.assign(this->args.begin(), this->args.end());
+		this->list_sorted = std::list<int>(this->args.begin(), this->args.end());
 		return 1;
 	}
 	if (this->args.size() == 1){
 		this->list_sorted.push_back(this->args[0]);
-		this->list_duration = (std::clock() - start_time) / static_cast<double>(CLOCKS_PER_SEC);
 		std::cout << "Only one number" << std::endl;
 		return 1;
 	}
-	std::list<std::pair<int, int> > pairs;
-	for(size_t i = 0; i < this->args.size(); i+= 2){
-		if (i + 1 < args.size()){
-			if(this->args[i] > this->args[i + 1])
-				pairs.push_back(std::make_pair(this->args[i + 1], this->args[i]));
-			else
-				pairs.push_back(std::make_pair(this->args[i], this->args[i + 1]));
-		}
-		else
-			pairs.push_back(std::make_pair(-1, this->args[i]));
+	std::vector<std::pair<int,int> > pairs;
+	for (size_t i = 0; i < this->args.size(); i += 2){
+		int first = this->args[i];
+		int second = (i + 1 < this->args.size() ? this->args[i + 1] : -1);
+		if (second != -1 && first > second)
+			std::swap(first, second);
+		pairs.push_back(std::make_pair(first, second));
 	}
-	std::list<int> mins;
-	for(std::list<std::pair<int, int> >::const_iterator it = pairs.begin(); it != pairs.end(); ++it){
-		if(it->first != -1){
-			mins.push_back(it->first);
-		}
+	std::vector<int> mins;
+	for(size_t i = 0; i < pairs.size(); ++i)
+		mins.push_back(pairs[i].first);
+	std::sort(mins.begin(), mins.end());
+
+	std::list<int> sorted;
+	for (size_t i = 0; i < pairs.size(); ++i){
+		std::list<int>::iterator pos = std::lower_bound(sorted.begin(), sorted.end(), pairs[i].second);
+		sorted.insert(pos, pairs[i].first);
 	}
 
-	mins.sort();
-	std::list<int> sorted_list = mins;
-	for(std::list<std::pair<int, int> >::const_iterator it = pairs.begin(); it != pairs.end(); ++it){
-		std::list<int>::iterator pos = sorted_list.begin();
-		for (; pos != list_sorted.end(); ++pos){
-			if (*pos >= it->second)
-				break;
-		}
-		sorted_list.insert(pos, it->second);
-	}
-	this->list_sorted = sorted_list;
-
-	duration = static_cast<double>(std::clock() - start_time) / CLOCKS_PER_SEC * 1000;
-
-	this->list_duration = duration;
+	this->list_sorted = sorted;
+	this->list_duration = static_cast<double>(std::clock() - start_time) / CLOCKS_PER_SEC * 1000;
 	return 0;
 }
 
