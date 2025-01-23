@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:21:41 by romlambe          #+#    #+#             */
-/*   Updated: 2024/11/12 15:08:13 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/23 12:13:37 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void BitcoinExchange::compare(std::string filename){
 				}
 				else{
 					float max = atof(value.c_str());
-					if (max >= 1000)
+					if (max > 1000)
 						std::cout << "Error: too large a number." << std::endl;
 					else if(max < 0)
 						std::cout << "Error: not a positive number." << std::endl;

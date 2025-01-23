@@ -6,7 +6,7 @@
 /*   By: romlambe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:00:13 by romlambe          #+#    #+#             */
-/*   Updated: 2025/01/22 16:16:35 by romlambe         ###   ########.fr       */
+/*   Updated: 2025/01/23 12:36:24 by romlambe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,16 +52,16 @@ int PmergeMe::parse_args(char **av){
 	int i = 0;
 	while (av[i]){
 		if (!digital_string(av[i])){
-			std::cout << "Error: " << av[i] << "isn't a number" << std::endl;
+			std::cout << "Error: " << av[i] << " isn't a number" << std::endl;
 			return 1;
 		}
 		long num = std::atol(av[i]);
 		if (num < 0){
-			std::cout << "Error: " << av[i] << "isn't a positive number" << std::endl;
+			std::cout << "Error: " << av[i] << " isn't a positive number" << std::endl;
 			return 1;
 		}
 		else if (num > INT_MAX){
-			std::cout << "Error: " << av[i] << "must be smaller than INT MAX " << std::endl;
+			std::cout << "Error: " << av[i] << " must be smaller than INT MAX " << std::endl;
 			return 1;
 		}
 		this->args.push_back(static_cast<int>(num));
